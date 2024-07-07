@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main
+        {
+            height: 50px;
+            width: auto;
+            background-color: red;
+        }
+        .sub{
+            background-color: aqua;
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>stop</button>
+    <div class="main">
+        Click to slide down
+    </div> 
+    <div class="sub">
+        im sliding
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    // $(document).ready(function(){
+    //     $(".main").click(function(){
+    //         $(".sub").slideDown(2000)
+    //     })
+    // })
+
+    // $(document).ready(function(){
+    //     $(".main").click(function(){
+    //         $(".sub").slideUp(2000)
+    //     })
+    // })
+
+    $(document).ready(function(){
+        $(".main").click(function(){
+            $(".sub").slideToggle(2000)
+        })
+    })
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            $(".sub").stop(2000)
+        })
+    })
+
+
+</script>
+
+
+</html>
